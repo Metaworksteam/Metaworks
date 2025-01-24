@@ -2,20 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --primary: 168 100% 34%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 100%;
+    --primary: 188 100% 50%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 222 47% 11%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 223 47% 16%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 223 47% 16%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 188 100% 50%;
   }
 }
 
+@layer utilities {
+  .bg-background {
+    background-color: hsl(var(--background));
+  }
+  
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
+
+  .bg-primary {
+    background-color: hsl(var(--primary));
+  }
+
+  .bg-primary-50 {
+    background-color: hsl(var(--primary) / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Cyber-inspired global styles */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply min-h-screen bg-background text-foreground;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom scrollbar for cyber aesthetic */
+::-webkit-scrollbar {
+  @apply w-2 bg-transparent;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-50 hover:bg-primary rounded-full;
+}
+
+/* Subtle fade-in animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Cyber hover effects */
+.cyber-hover {
+  @apply transition-all duration-300 ease-in-out 
+         hover:scale-105 
+         hover:shadow-lg 
+         hover:brightness-110;
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .text-gradient {
+  background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

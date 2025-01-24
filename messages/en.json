@@ -1,0 +1,30 @@
+{
+  "HomePage": {
+    "hero": {
+      "title": {
+        "line1": "Secure Your Business with",
+        "line2": "One-Click Compliance"
+      },
+      "description": "Streamline cybersecurity compliance, protect your data, and save time and money with Meta Works.",
+      "imageAlt": "Cybersecurity Compliance Dashboard",
+      "buttons": {
+        "start": "Get Started Today",
+        "learn": "Learn More About Our Product"
+      }
+    },
+    "features": {
+      "connectivity": {
+        "title": "Connected Ecosystems",
+        "description": "Seamless integration across digital platforms"
+      },
+      "infrastructure": {
+        "title": "Advanced Infrastructure", 
+        "description": "Scalable and secure cloud solutions"
+      },
+      "intelligence": {
+        "title": "Adaptive Intelligence",
+        "description": "AI-powered insights and automation"
+      }
+    }
+  }
+}
