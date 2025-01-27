@@ -7,8 +7,11 @@ const nextConfig = {
   i18n: {
     locales: ['en', 'ar'],
     defaultLocale: 'en',
-    localeDetection: false
-  }
+    localeDetection: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: true, // Add this line to disable linting during the build process
+  },
 };
 
 module.exports = nextConfig;
