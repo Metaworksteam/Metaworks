@@ -34,7 +34,7 @@ export default function ProductPage() {
   ]
 
   return (
-    <div className="container mx-auto px-6 py-16 space-y-24">
+    <div className="min-h-screen w-full bg-[#0a192f] text-white">
       {/* Hero Section */}
       <div className="text-center pt-24">
         <h1 className="
