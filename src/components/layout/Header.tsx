@@ -38,7 +38,7 @@ export function Header() {
     },
     { 
       label: "About us",
-      href: "about us",
+      href: "/about us",
       icon: Shield,
       description: "Learn more about us"
     },
@@ -50,7 +50,7 @@ export function Header() {
     },
     { 
       label: "Contact Us",
-      href: "/contact us",
+      href: "/contact-us",
       icon: Shield,
       description: "Get in touch with us"
     }
