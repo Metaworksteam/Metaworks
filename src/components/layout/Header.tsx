@@ -19,43 +19,41 @@ export function Header() {
 
   const NAV_ITEMS = [
     { 
-    label: "Home",
-    href: "/",
-    icon: Home,
-    description: "Return to homepage"
-  },
-  { 
-    label: "Product",
-    href: "/product",
-    icon: Layers,
-    description: "Platform features and benefits"
-  },
-  { 
-    label: "Services",
-    href: "/services",
-    icon: Shield,
-    description: "Comprehensive cybersecurity solutions"
-  },
-  { 
-    label: "About Us",
-    href: "/about-us",
-    icon: Shield,
-    description: "Learn more about us"
-  },  // New item (Ayesha)
-  { 
-    label: "Standards",
-    href: "/standards",
-    icon: Shield,
-    description: "Industry standards and certifications" 
-  }, // New item (Ayesha)
-  { 
-    label: "Contact Us",
-    href: "/contact-us",
-    icon: Shield,
-    description: "Get in touch with us" 
-  }  // New item (Ayesha)
-];
-
+      label: "Home",
+      href: "/",
+      icon: Home,
+      description: "Return to homepage"
+    },
+    { 
+      label: "Product",
+      href: "/product",
+      icon: Layers,
+      description: "Platform features and benefits"
+    },
+    { 
+      label: "Services",
+      href: "/services",
+      icon: Shield,
+      description: "Comprehensive cybersecurity solutions"
+    },
+    { 
+      label: "About Us",
+      href: "/about-us",
+      icon: Shield,
+      description: "Learn more about us"
+    },
+    { 
+      label: "Standards",
+      href: "/standards",
+      icon: Shield,
+      description: "Industry standards and certifications"
+    },
+    { 
+      label: "Contact Us",
+      href: "/contact-us",
+      icon: Shield,
+      description: "Get in touch with us"
+    }
   ];
 
   const [currentLanguage, setCurrentLanguage] = React.useState('en');
