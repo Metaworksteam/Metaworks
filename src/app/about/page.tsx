@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { TeamMember } from "@/components/TeamMember"
 import Link from "next/link"
 
 export default function AboutPage() {
@@ -13,7 +14,7 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
         <div>
           <h2 className="text-3xl font-semibold mb-6 text-primary-navy">
             Our Mission
@@ -37,7 +38,36 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="text-center mt-16">
+      <section className="mb-24">
+        <h2 className="text-4xl font-bold text-center mb-12 text-primary-navy">
+          Meet Our Team
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <TeamMember 
+            name="John Smith"
+            role="CEO & Founder"
+            image="/images/team/ceo.jpg"
+            bio="With over 15 years of experience in cybersecurity, John leads Meta Works with a vision to revolutionize compliance automation."
+            linkedIn="https://linkedin.com/in/johnsmith"
+          />
+          <TeamMember 
+            name="Sarah Johnson"
+            role="CTO"
+            image="/images/team/cto.jpg"
+            bio="A tech innovator with expertise in AI and security architecture, Sarah drives our technical strategy and product development."
+            linkedIn="https://linkedin.com/in/sarahjohnson"
+          />
+          <TeamMember 
+            name="Michael Chen"
+            role="Head of Security"
+            image="/images/team/security-head.jpg"
+            bio="Leading our security operations, Michael ensures our solutions meet the highest standards of cybersecurity excellence."
+            linkedIn="https://linkedin.com/in/michaelchen"
+          />
+        </div>
+      </section>
+
+      <div className="text-center">
         <Button asChild size="lg" className="bg-primary-teal hover:bg-accent-blue">
           <Link href="/product">Explore Our Product</Link>
         </Button>
