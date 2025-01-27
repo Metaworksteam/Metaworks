@@ -1,16 +1,3 @@
-import { Button } from "@/components/ui/button"
-import { 
-  Accordion, 
-  AccordionContent, 
-  AccordionItem, 
-  AccordionTrigger 
-} from "@/components/ui/accordion"
-import { 
-  FileCheck2, 
-  ShieldCheck, 
-  ClipboardList 
-} from "lucide-react"
-
 export default function ServicesPage() {
   const services = [
     {
@@ -61,23 +48,23 @@ export default function ServicesPage() {
   ]
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="bg-[#0a192f] container mx-auto px-4 py-16">
       <section className="text-center mb-16">
-        <h1 className="text-5xl font-bold mb-6 text-primary-navy dark:text-white">
+        <h1 className="text-5xl font-bold mb-6 text-white">
           Our Expertise
         </h1>
-        <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+        <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
           Comprehensive cybersecurity services designed to protect and empower your business
         </p>
       </section>
 
       <section className="grid md:grid-cols-3 gap-8 mb-16">
         {services.map((service, index) => (
-          <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-            <service.icon className="w-12 h-12 text-primary-teal mb-4" />
-            <h2 className="text-2xl font-semibold mb-4 text-primary-navy">{service.title}</h2>
-            <p className="text-text-secondary mb-4">{service.description}</p>
-            <ul className="list-disc list-inside text-text-secondary">
+          <div key={index} className="bg-[#112240] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+            <service.icon className="w-12 h-12 text-cyan-500 mb-4" />
+            <h2 className="text-2xl font-semibold mb-4">{service.title}</h2>
+            <p className="mb-4">{service.description}</p>
+            <ul className="list-disc list-inside">
               {service.details.map((detail, idx) => (
                 <li key={idx}>{detail}</li>
               ))}
@@ -87,16 +74,16 @@ export default function ServicesPage() {
       </section>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-semibold text-center mb-12 text-primary-navy">
+        <h2 className="text-3xl font-semibold text-center mb-12 text-white">
           Frequently Asked Questions
         </h2>
         <Accordion type="single" collapsible className="max-w-4xl mx-auto">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-primary-navy hover:text-primary-teal">
+              <AccordionTrigger className="text-white hover:text-cyan-500">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-text-secondary">
+              <AccordionContent className="text-cyan-100">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
@@ -105,7 +92,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="text-center">
-        <Button size="lg" className="bg-primary-teal hover:bg-accent-blue">
+        <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-white">
           Contact Us to Learn More
         </Button>
       </section>
