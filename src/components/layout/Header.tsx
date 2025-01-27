@@ -36,6 +36,24 @@ export function Header() {
       icon: Shield,
       description: "Comprehensive cybersecurity solutions"
     }
+    { 
+      label: "About Us",
+      href: "/about-us",
+      icon: Shield,
+      description: "Learn more about us"
+    },  // New item (Ayesha)
+    { 
+      label: "Standards",
+      href: "/standards",
+      icon: Shield,
+      description: "Industry standards and certifications" 
+    }, // New item (Ayesha)
+    {
+      label: "Contact Us",
+      href: "/contact-us",
+      icon: Shield,
+      description: "Get in touch with us" 
+    }  // New item (Ayesha)
   ];
 
   const [currentLanguage, setCurrentLanguage] = React.useState('en');
@@ -73,7 +91,7 @@ export function Header() {
           </Link>
         </div>
 
-        {/* Navigation */}
+         {/* Navigation */}
         <nav className="flex items-center space-x-4">
           {NAV_ITEMS.map((item) => (
             <Link
@@ -91,7 +109,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
-
+        
         {/* Actions */}
         <div className="flex items-center space-x-4">
           {/* Language Switcher */}
