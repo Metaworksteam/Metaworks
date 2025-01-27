@@ -35,27 +35,25 @@ export function Header() {
       href: "/services",
       icon: Shield,
       description: "Comprehensive cybersecurity solutions"
-    }
+    },
     { 
       label: "About us",
       href: "about us",
       icon: Shield,
       description: "Learn more about us"
-    }
+    },
     { 
       label: "Standards",
       href: "/standards",
       icon: Shield,
       description: "Industry standards and certifications"
-    }
+    },
     { 
       label: "Contact Us",
       href: "/contact us",
       icon: Shield,
       description: "Get in touch with us"
     }
-  
-  
   ];
 
   const [currentLanguage, setCurrentLanguage] = React.useState('en');
