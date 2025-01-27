@@ -19,8 +19,6 @@ export function Header() {
 
   const NAV_ITEMS = [
     { 
-const NAV_ITEMS = [
-  { 
     label: "Home",
     href: "/",
     icon: Home,
