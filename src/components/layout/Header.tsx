@@ -39,19 +39,19 @@ export function Header() {
   { 
     label: "About Us",
     href: "/about-us",  // Corrected path
-    icon: Shield,
+    //icon: Shield,
     description: "Learn more about us"
   },
   { 
     label: "Standards",
     href: "/standards",
-    icon: Shield,
+    //icon: Shield,
     description: "Industry standards and certifications"
   },
   { 
     label: "Contact Us",
     href: "/contact-us",  // Corrected path
-    icon: Shield,
+    //icon: Shield,
     description: "Get in touch with us"
   }
 ];
