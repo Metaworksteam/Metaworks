@@ -33,7 +33,7 @@ export function Header() {
   { 
     label: "Services",
     href: "/services",
-    icon: Shield,
+    //icon: Shield,
     description: "Comprehensive cybersecurity solutions"
   },
   { 
