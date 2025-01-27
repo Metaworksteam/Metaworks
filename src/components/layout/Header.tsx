@@ -18,43 +18,43 @@ export function Header() {
   const pathname = usePathname();
 
   const NAV_ITEMS = [
-    { 
-      label: "Home",
-      href: "/",
-      icon: Home,
-      description: "Return to homepage"
-    },
-    { 
-      label: "Product",
-      href: "/product",
-      icon: Layers,
-      description: "Platform features and benefits"
-    },
-    { 
-      label: "Services",
-      href: "/services",
-      icon: Shield,
-      description: "Comprehensive cybersecurity solutions"
-    },
-    { 
-      label: "About us",
-      href: "/about us",
-      icon: Shield,
-      description: "Learn more about us"
-    },
-    { 
-      label: "Standards",
-      href: "/standards",
-      icon: Shield,
-      description: "Industry standards and certifications"
-    },
-    { 
-      label: "Contact Us",
-      href: "/contact-us",
-      icon: Shield,
-      description: "Get in touch with us"
-    }
-  ];
+  { 
+    label: "Home",
+    href: "/",
+    icon: Home,
+    description: "Return to homepage"
+  },
+  { 
+    label: "Product",
+    href: "/product",
+    icon: Layers,
+    description: "Platform features and benefits"
+  },
+  { 
+    label: "Services",
+    href: "/services",
+    icon: Shield,
+    description: "Comprehensive cybersecurity solutions"
+  },
+  { 
+    label: "About Us",
+    href: "/about-us",  // Corrected path
+    icon: Shield,
+    description: "Learn more about us"
+  },
+  { 
+    label: "Standards",
+    href: "/standards",
+    icon: Shield,
+    description: "Industry standards and certifications"
+  },
+  { 
+    label: "Contact Us",
+    href: "/contact-us",  // Corrected path
+    icon: Shield,
+    description: "Get in touch with us"
+  }
+];
 
   const [currentLanguage, setCurrentLanguage] = React.useState('en');
 
