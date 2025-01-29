@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function ServicesPage() {
   const services = [
     {
-      icon: LucideIcons.FileCheck2,
+      icon: <FileCheck2 className="w-12 h-12 text-cyan-500 mb-4" />, // Directly assigning the JSX component
       title: "Compliance Framework Implementation",
       description: "Comprehensive guidance in implementing industry-standard compliance frameworks tailored to your business needs.",
       details: [
@@ -15,7 +15,7 @@ export default function ServicesPage() {
       ]
     },
     {
-      icon: LucideIcons.ClipboardList,
+      icon: <ClipboardList className="w-12 h-12 text-cyan-500 mb-4" />, // Directly assigning the JSX component
       title: "Policy and Procedure Development",
       description: "Develop robust, clear, and actionable cybersecurity policies that align with your organizational goals.",
       details: [
@@ -25,7 +25,7 @@ export default function ServicesPage() {
       ]
     },
     {
-      icon: LucideIcons.ShieldCheck,
+      icon: <ShieldCheck className="w-12 h-12 text-cyan-500 mb-4" />, // Directly assigning the JSX component
       title: "Risk Assessment Services",
       description: "In-depth risk evaluation and mitigation strategies to protect your digital infrastructure.",
       details: [
@@ -63,39 +63,8 @@ export default function ServicesPage() {
       <section className="grid md:grid-cols-3 gap-8 mb-16">
         {services.map((service, index) => (
           <div key={index} className="bg-[#112240] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-            <service.icon className="w-12 h-12 text-cyan-500 mb-4" />
+            {service.icon} {/* Directly rendering the icon here */}
             <h2 className="text-2xl font-semibold mb-4">{service.title}</h2>
             <p className="mb-4">{service.description}</p>
             <ul className="list-disc list-inside">
-              {service.details.map((detail, idx) => (
-                <li key={idx}>{detail}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </section>
-
-      <section className="mb-16">
-        <h2 className="text-3xl font-semibold text-center mb-12 text-white">
-          Frequently Asked Questions
-        </h2>
-        <Accordion type="single" collapsible className="max-w-4xl mx-auto">
-          {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-white hover:text-cyan-500">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-cyan-100">{faq.answer}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </section>
-
-      <section className="text-center">
-        <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-white">
-          Contact Us to Learn More
-        </Button>
-      </section>
-    </div>
-  );
-}
+              {service.det
