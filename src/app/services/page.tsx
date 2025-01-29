@@ -1,3 +1,7 @@
+import { FileCheck2, ClipboardList, ShieldCheck } from "lucide-react";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+
 export default function ServicesPage() {
   const services = [
     {
@@ -30,7 +34,7 @@ export default function ServicesPage() {
         "Actionable remediation recommendations"
       ]
     }
-  ]
+  ];
 
   const faqs = [
     {
@@ -45,14 +49,12 @@ export default function ServicesPage() {
       question: "Can you help businesses of all sizes?",
       answer: "Absolutely! Our solutions are scalable and can be customized for startups, SMBs, and enterprise-level organizations."
     }
-  ]
+  ];
 
   return (
     <div className="bg-[#0a192f] container mx-auto px-4 py-16">
       <section className="text-center mb-16">
-        <h1 className="text-5xl font-bold mb-6 text-white">
-          Our Expertise
-        </h1>
+        <h1 className="text-5xl font-bold mb-6 text-white">Our Expertise</h1>
         <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
           Comprehensive cybersecurity services designed to protect and empower your business
         </p>
@@ -83,9 +85,7 @@ export default function ServicesPage() {
               <AccordionTrigger className="text-white hover:text-cyan-500">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-cyan-100">
-                {faq.answer}
-              </AccordionContent>
+              <AccordionContent className="text-cyan-100">{faq.answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
@@ -97,5 +97,5 @@ export default function ServicesPage() {
         </Button>
       </section>
     </div>
-  )
+  );
 }
