@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function ServicesPage() {
   const services = [
     {
-      icon: FileCheck2,
+      icon: LucideIcons.FileCheck2,
       title: "Compliance Framework Implementation",
       description: "Comprehensive guidance in implementing industry-standard compliance frameworks tailored to your business needs.",
       details: [
@@ -15,7 +15,7 @@ export default function ServicesPage() {
       ]
     },
     {
-      icon: ClipboardList,
+      icon: LucideIcons.ClipboardList,
       title: "Policy and Procedure Development",
       description: "Develop robust, clear, and actionable cybersecurity policies that align with your organizational goals.",
       details: [
@@ -25,7 +25,7 @@ export default function ServicesPage() {
       ]
     },
     {
-      icon: ShieldCheck,
+      icon: LucideIcons.ShieldCheck,
       title: "Risk Assessment Services",
       description: "In-depth risk evaluation and mitigation strategies to protect your digital infrastructure.",
       details: [
