@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function ServicesPage() {
   const services = [
     {
-      icon: <FileCheck2 className="w-12 h-12 text-cyan-500 mb-4" />, // Directly assigning the JSX component
+      icon: <FileCheck2 className="w-12 h-12 text-cyan-500 mb-4" />,
       title: "Compliance Framework Implementation",
       description: "Comprehensive guidance in implementing industry-standard compliance frameworks tailored to your business needs.",
       details: [
@@ -15,7 +15,7 @@ export default function ServicesPage() {
       ]
     },
     {
-      icon: <ClipboardList className="w-12 h-12 text-cyan-500 mb-4" />, // Directly assigning the JSX component
+      icon: <ClipboardList className="w-12 h-12 text-cyan-500 mb-4" />,
       title: "Policy and Procedure Development",
       description: "Develop robust, clear, and actionable cybersecurity policies that align with your organizational goals.",
       details: [
@@ -25,7 +25,7 @@ export default function ServicesPage() {
       ]
     },
     {
-      icon: <ShieldCheck className="w-12 h-12 text-cyan-500 mb-4" />, // Directly assigning the JSX component
+      icon: <ShieldCheck className="w-12 h-12 text-cyan-500 mb-4" />,
       title: "Risk Assessment Services",
       description: "In-depth risk evaluation and mitigation strategies to protect your digital infrastructure.",
       details: [
@@ -53,18 +53,49 @@ export default function ServicesPage() {
 
   return (
     <div className="bg-[#0a192f] container mx-auto px-4 py-16">
+      {/* Header Section */}
       <section className="text-center mb-16">
         <h1 className="text-5xl font-bold mb-6 text-white">Our Expertise</h1>
         <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
-          Comprehensive cybersecurity services designed to protect and empower your business
+          Comprehensive cybersecurity services designed to protect and empower your business.
         </p>
       </section>
 
+      {/* Services Section */}
       <section className="grid md:grid-cols-3 gap-8 mb-16">
         {services.map((service, index) => (
           <div key={index} className="bg-[#112240] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-            {service.icon} {/* Directly rendering the icon here */}
+            {service.icon} 
             <h2 className="text-2xl font-semibold mb-4">{service.title}</h2>
             <p className="mb-4">{service.description}</p>
             <ul className="list-disc list-inside">
-              {service.det
+              {service.details.map((detail, idx) => (
+                <li key={idx}>{detail}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+
+      {/* FAQs Section */}
+      <section className="max-w-3xl mx-auto">
+        <h2 className="text-3xl font-semibold text-white mb-6 text-center">Frequently Asked Questions</h2>
+        <Accordion type="single" collapsible>
+          {faqs.map((faq, index) => (
+            <AccordionItem key={index} value={`faq-${index}`}>
+              <AccordionTrigger>{faq.question}</AccordionTrigger>
+              <AccordionContent>{faq.answer}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </section>
+
+      {/* CTA Section */}
+      <section className="text-center mt-16">
+        <Button className="bg-cyan-500 text-white px-6 py-3 text-lg rounded-lg hover:bg-cyan-600 transition">
+          Get in Touch
+        </Button>
+      </section>
+    </div>
+  );
+}
