@@ -52,50 +52,51 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="bg-[#0a192f] container mx-auto px-4 py-16">
-      <section className="text-center mb-16">
-        <h1 className="text-5xl font-bold mb-6 text-white">Our Expertise</h1>
-        <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
-          Comprehensive cybersecurity services designed to protect and empower your business
-        </p>
-      </section>
+    <div className="min-h-screen bg-[#0a192f] text-white">
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6 text-white">Our Expertise</h1>
+          <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
+            Comprehensive cybersecurity services designed to protect and empower your business
+          </p>
+        </section>
 
-      {/* Services Section */}
-      <section className="grid md:grid-cols-3 gap-8 mb-16">
-        {services.map((service, index) => (
-          <div key={index} className="bg-[#112240] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-            {service.icon}
-            <h2 className="text-2xl font-semibold mb-4">{service.title}</h2>
-            <p className="mb-4">{service.description}</p>
-            <ul className="list-disc list-inside">
-              {service.details.map((detail, idx) => (
-                <li key={idx}>{detail}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </section>
-
-      {/* FAQ Section */}
-      <section className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-semibold text-white mb-6 text-center">Frequently Asked Questions</h2>
-        <Accordion type="single" collapsible>
-          {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`faq-${index}`}>
-              <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
-            </AccordionItem>
+        {/* Services Section */}
+        <section className="grid md:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <div key={index} className="bg-[#112240] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              {service.icon}
+              <h2 className="text-2xl font-semibold mb-4">{service.title}</h2>
+              <p className="mb-4">{service.description}</p>
+              <ul className="list-disc list-inside">
+                {service.details.map((detail, idx) => (
+                  <li key={idx}>{detail}</li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </Accordion>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="text-center mt-12">
-        <Button className="bg-cyan-500 hover:bg-cyan-600 text-white text-lg font-semibold py-3 px-6 rounded-lg shadow-md transition-all">
-          Get Started
-        </Button>
-      </section>
+        {/* FAQ Section */}
+        <section className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-semibold text-white mb-6 text-center">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible>
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`faq-${index}`}>
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent>{faq.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-center mt-12">
+          <Button className="bg-cyan-500 hover:bg-cyan-600 text-white text-lg font-semibold py-3 px-6 rounded-lg shadow-md transition-all">
+            Get Started
+          </Button>
+        </section>
+      </div>
     </div>
   );
 }
-
